@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>API Test  </title>
+</head>
+
+<body>
+<h1>
+<div id = "city"> </div>
+</h1> 
+
+<p>
+<div id = "temp"> </div>
+<div id = "hum"> </div>
+<div id = "min_max"> </div>
+</p>
+<script>
+const url = "http://api.openweathermap.org/data/2.5/weather?q=Los Angeles&appid=70e591ee303843c0be128e564b256682&units=imperial";
+function screencb(data)
+{
+	//const d = new Date(data.main);
+	document.getElementById("city").innerHTML = "This is weather for the city of " + data.name;
+	document.getElementById("temp").innerHTML = "The temperature today is "   + data.main.temp + "&deg F, but it feels more like " 
+	+ data.main.feels_like + "&deg F";
+	document.getElementById("hum").innerHTML = "The humidity today is sitting at about " + data.main.humidity + "%";
+	document.getElementById("min_max").innerHTML = "Our highs today go up to around " + data.main.temp_max + 
+	"&deg F, and our lows go down to " + data.main.temp_min + "&deg F";
+}
+
+function cb(response)
+{
+	const prom2 = response.json();
+	prom2.then(screencb);
+}
+
+const prom= fetch(url);
+prom.then(cb);
+//.then(response=> response.json()).then(data=>console.log(data));
+</script>
+
+</body>
+
+
+
+</html>

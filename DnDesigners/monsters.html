@@ -1,0 +1,78 @@
+<html>
+<head>
+<h1>"Monsters page"</h1>
+</head>
+
+<style>
+    body{
+        background-image: url("images/backgrounds/char_bg.jpg");
+        background-color: darkblue;
+    }
+    em{
+        color: crimson;
+        font-style: normal;        
+    }
+    .main_title{
+        font-weight: bold;
+        text-align: left;      
+    }
+
+    /*CSS for sidebar*/
+    .sidenav{
+        width: 130px;
+        position: fixed;
+        z-index: 1;
+        top: 40%;
+        left: 10px;
+        background: rgba(25, 7, 107, 0.781);
+        border-radius: 30px;
+        overflow-x: hidden;
+        padding: 8px 0;
+    }
+    .sidenav a {
+        padding: 10px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #ffcccc;
+        display: block;
+        text-align: center;
+    }
+
+    .sidenav a:hover {
+        color: #bcffbf;
+    }
+
+    main {
+        margin-left: 160px; /* Same width as the sidebar + left position in px */
+        font-size: 28px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        
+    }
+
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+            
+    }
+</style>
+
+<body>
+    <title>"DnDesigners Home"</title>
+    <a href="/index.html">
+        <p class = "main_title" style = "font-size: 6vw;"><em>DnDesigners</em></p>
+    </a>
+    <div class="sidenav">
+        <a href="characters.html">Characters</a>
+        <a href="monsters.html">Monsters</a>
+        <a href="items.html">Items</a>
+        <a href="about.html">About</a>
+    </div>
+      
+      <!-- Page content -->
+      <div class="main">
+        ...
+      </div>            
+        
+    
+</body>
+</html>
